@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mooncake</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"
+      integrity="sha512-EKWWs1ZcA2ZY9lbLISPz8aGR2+L7JVYqBAYTq5AXgBkSjRSuQEGqWx8R1zAX16KdXPaCjOCaKE8MCpU0wcHlHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+      integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/Css/style_Product.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Dancing+Script|Itim|Lobster|Montserrat:500|Noto+Serif|Nunito|Patrick+Hand|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i|Roboto+Slab|Saira"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!--Header-->
+  <body>
+    <header class="sticky">
+      <a href="#" class="logo"
+        ><i style="margin-top: 5px" class="bx bxs-cake"></i>Dyancake</a
+      >
+      <div class="menuToggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
+        <li>
+          <button class="button-87" role="button" id="cart-btn">
+            <i class="bx bx-shopping-bag"></i>Cart
+            <span class="cart-span" id="cartCount"></span>
+          </button>
+        </li>
+      </ul>
+    </header>
+    <section class="banner" id="banner">
+      <div class="content">
+        <h2>Dyancake</h2>
+        <a href="#productsList" class="btn">Buy now</a>
+      </div>
+    </section>
+    <!-- End header -->
+    <section class="about" id="about">
+      <div class="row1">
+        <div class="col50">
+          <h2 class="titleText"><span>A</span>bout <span>P</span>roducts</h2>
+          <p>
+            Bánh Trung thu tượng trưng cho sự đoàn tụ gia đình và hạnh phúc.
+            Tính biểu tượng này bắt nguồn từ việc các gia đình tụ họp cùng nhau
+            để đón Tết Trung thu. Ngày nay, việc tặng bánh nướng trong tháng 8
+            Âm lịch là một truyền thống với nhiều người. Ngay cả trong đại dịch,
+            thói quen này cũng không mai một.
+          </p>
+          <p>
+            Thế thì các bạn hãy mua cho mình một chiếc bánh để tặng bạn bè và
+            người thân cũng như là cho chính mình nhé!
+          </p>
+        </div>
+        <div class="col50">
+          <div class="imgbx">
+            <img
+              src="https://i1-dulich.vnecdn.net/2022/01/05/2-6449-1631084851-5371-1641375848.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=5K19amoJrY8-bLSjnA_R_g"
+              alt="Hình ảnh về một chiếc bánh"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End slideshow -->
+    <div class="searchForm">
+      <input
+        type="text"
+        class="searchBar"
+        id="searchInput"
+        placeholder="Điền loại bánh cần tìm"
+      />
+      <button id="searchButton" type="submit" class="searchButton">
+        <i class="bx bx-search-alt"></i>
+      </button>
+    </div>
+    <!-- End Search -->
+    <h2 class="Title">Feartured Product</h2>
+    <section>
+      <div id="productsList" class="small-container"></div>
+    </section>
+    <!-- End products -->
+    <div class="cart-wrapper">
+      <div class="cart">
+        <h3 class="font-weight-light">
+          <i class="fa-solid fa-cart-shopping mx-2"></i>Your Cart
+        </h3>
+        <table class="table table-hover">
+          <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Title</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+          <tr id="cart-body" class="cart-render">
+            <td rowspan="6">
+              <div class="cart-img">
+                <img
+                  src="https://suckhoedoisong.qltns.mediacdn.vn/thumb_w/1200/324455921873985536/2021/8/24/banh-trung-thu-1629769530136945795794-47-0-460-660-crop-1629769537341793257055.jpg"
+                  alt=""
+                />
+              </div>
+            </td>
+            <td>Product Name</td>
+            <td>$50</td>
+            <td>
+              <span class="minus-btn" onclick="btnMinus()"
+                ><button>-</button></span
+              >1
+              <span class="plus-btn" onclick="btnAdd()"
+                ><button>+</button></span
+              >
+            </td>
+            <td colspan="5">Total: $<span class="total">0</span></td>
+            <td colspan="6"><a href="">Remove</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <section class="contact" id="contact">
+      <h1>Order Various Products From The World</h1>
+      <a href="" class="btn1">Contact us</a>
+    </section>
+    <!-- End contact -->
+    <!-- End cart -->
+
+    <section class="footer">
+      <h4>About us</h4>
+      <p>The place to show you more about us</p>
+      <div class="icons">
+        <i class="fa-brands fa-facebook fa"></i>
+        <i class="fa-brands fa-facebook-messenger fa"></i>
+        <i class="fa-brands fa-instagram fa"></i>
+        <i class="fa-brands fa-x-twitter fa"></i>
+      </div>
+      <p class="footer-heart">
+        Made with love <i class="fa-regular fa-heart fa"></i> from Viet Nam
+      </p>
+    </section>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"
+      integrity="sha512-emSwuKiMyYedRwflbZB2ghzX8Cw8fmNVgZ6yQNNXXagFzFOaQmbvQ1vmDkddHjm5AITcBIZfC7k4ShQSjgPAmQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="/Controller/main.js"></script>
+  </body>
+</html>

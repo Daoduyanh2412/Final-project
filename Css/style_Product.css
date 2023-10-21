@@ -1,0 +1,466 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+body {
+  min-height: 1000px;
+  background: #fff;
+  text-align: center;
+}
+section {
+  padding: 100px;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  opacity: 1;
+  transition: 0.2s;
+}
+.cart-span {
+  position: relative;
+  top: -1px;
+}
+.sticky {
+  background: #111;
+  padding: 10px 100px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+  color: #fff;
+}
+.sticky .logo {
+  color: #ff0157;
+}
+.logo:hover {
+  color: #fff;
+}
+
+.navigation {
+  position: relative;
+  display: flex;
+}
+
+.navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+.navigation li a {
+  text-decoration: none;
+  color: #ffa500;
+  font-weight: 300;
+}
+
+.navigation li a:hover {
+  color: #ff0157;
+  cursor: pointer;
+}
+
+.cart-span {
+  padding: 10px 0 0 4px;
+}
+.searchForm {
+  margin-top: 100px;
+  padding: 20px 30px;
+  width: 25%;
+  display: inline-block;
+  background-color: #ff0157;
+  border-radius: 50px;
+}
+.searchForm input::placeholder {
+  color: #fff;
+}
+.searchBar {
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.searchButton {
+  outline: none;
+  border: none;
+  background-color: #fff;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 10px;
+  margin-left: 20px;
+}
+.searchButton i {
+  width: 25px;
+  height: 25px;
+}
+img {
+  max-width: 100%;
+  object-fit: contain;
+  height: 15em;
+}
+#productsList {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.col-4 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  width: 340px;
+  margin: 20px;
+  border: 15px solid #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+  transition: 0.5s;
+}
+.col-4 p {
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.9;
+}
+.col-4 h6 {
+  letter-spacing: 1.5px;
+  font-size: 14px;
+}
+.col-4 h4 {
+  color: #111;
+  font-weight: 600;
+  text-align: center;
+}
+.col-4:hover {
+  transform: translateY(-5%);
+}
+.Title {
+  text-align: center;
+  margin: 20px 5px 10px 5px;
+  position: relative;
+  line-height: 60px;
+  color: #111;
+}
+.Title::after {
+  content: "";
+  background: #ff523b;
+  width: 100px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.button-28 {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1a1a1a;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3b3b3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+.button-28:disabled {
+  pointer-events: none;
+}
+.button-28:hover {
+  color: #fff;
+  background-color: #1a1a1a;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #ff512f 0%,
+    #f09819 51%,
+    #ff512f 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  position: inline-block;
+}
+.button-87:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.button-87:active {
+  transform: scale(0.95);
+}
+.button-87 i {
+  padding-right: 5px;
+}
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://w0.peakpx.com/wallpaper/454/916/HD-wallpaper-mooncake-food-traditional-food-chinese-oriental-food.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.content h2 {
+  font-size: 100px;
+  color: #f09819;
+}
+
+.content h2:hover {
+  transition: all 0.6s ease;
+}
+
+.content p {
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+  font-style: italic;
+}
+.content a {
+  text-decoration: none;
+  font-size: 17px;
+  color: #fff;
+}
+.content p:hover {
+  letter-spacing: 5px;
+  transition: all 2s ease-in-out;
+}
+.btn {
+  font-size: 1em;
+  color: #fff;
+  background: #8b4513;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.btn:hover {
+  letter-spacing: 6px;
+  color: #111;
+  font-weight: bold;
+}
+.about {
+  background-color: #ffa500;
+}
+.row1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.col50 {
+  position: relative;
+  width: 48%;
+}
+
+.col50 img:hover {
+  transition: all 0.8s ease-in-out;
+  transform: scale(1.1);
+  transform: rotate(6deg);
+  opacity: 0.9;
+}
+.titleText {
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.titleText span {
+  color: #ff0157;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.imgbx {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.imgbx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.cart-wrapper {
+  position: fixed;
+  top: 70px;
+  width: 50%;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 4px black;
+  height: 85vh;
+  right: -1000px;
+  transition: right 300ms;
+  margin-top: 42px;
+}
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+.cart-img{
+  display: flex;
+  flex-wrap: wrap;
+}
+.RenderProduct{
+  
+}
+th{
+  padding: 5px;
+  font-weight:normal ;
+}
+td{
+  padding: 10px 5px;
+}
+td input{
+  width: 40px;
+  height: 30px;
+  padding: 5px;
+}
+td a{
+  color: #ff0157;
+  text-decoration: none;
+  padding: 10px;
+}
+td img{
+  width: 100px;
+  height: 50%;
+}
+td button{
+  font-size: 1em sans-serif;
+  display: inline-block;
+  padding: 5px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #111;
+}
+.cart-on {
+  right: 0;
+}
+.contact {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://cybergeekgirl.co.uk/wp-content/uploads/2019/08/businessmen-businesspeople-businesswomen-1249158-1280x640.jpg);
+  background-position: center;
+  border-radius: 10px;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.contact h1 {
+  color: #fff;
+  margin-bottom: 40px;
+  padding: 0;
+}
+.btn1 {
+  font-size: 1em;
+  color: #fff;
+  background: #8b4513;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+.btn1:hover {
+  letter-spacing: 6px;
+  color: #fff;
+  font-weight: bold;
+  background: transparent;
+}
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 28px;
+  font-weight: 600;
+}
+.icons .fa {
+  color: #ff4336;
+  margin: 0 13px;
+  cursor: pointer;
+  padding: 18px 0;
+}
+.footer-heart i {
+  color: #ff4336;
+  margin: 0 8px;
+  cursor: pointer;
+  padding: 15px 0;
+}
